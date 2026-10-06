@@ -1,0 +1,65 @@
+:root{--roast:#1F130E;--plum:#3A2140;--pumpkin:#F28A1E;--moss:#8A9A4B;--bone:#EFE6D2;--font-h:'Young Serif',serif;--font-b:'Figtree',sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--roast);color:var(--bone);font-family:var(--font-b);font-size:1.05rem;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4,.navbar-brand{font-family:var(--font-h);font-weight:400;line-height:1.15}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1rem}
+a{color:var(--pumpkin)}
+section{padding:4.5rem 0;position:relative}
+.navbar{background:rgba(31,19,14,.92);border-bottom:2px dashed var(--pumpkin);backdrop-filter:blur(6px)}
+.navbar-brand{color:var(--pumpkin)!important;font-size:1.5rem}
+.nav-link{color:var(--bone)!important}
+.nav-link:hover,.nav-link.active{color:var(--pumpkin)!important}
+.navbar-toggler{border-color:var(--pumpkin)}
+.navbar-toggler-icon{filter:invert(.9) sepia(1) saturate(5) hue-rotate(350deg)}
+.btn-pumpkin{background:var(--pumpkin);color:var(--roast);font-weight:600;border:0;border-radius:50px;padding:.7rem 1.8rem;transition:transform .2s,box-shadow .2s}
+.btn-pumpkin:hover{background:#ffa13d;color:var(--roast);transform:rotate(-2deg) scale(1.05);box-shadow:0 0 25px rgba(242,138,30,.5)}
+.btn-outline-bone{border:2px solid var(--bone);color:var(--bone);border-radius:50px;padding:.7rem 1.8rem}
+.btn-outline-bone:hover{background:var(--bone);color:var(--roast)}
+/* hero */
+.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(circle at 75% 40%,#5a2f12 0,var(--roast) 60%);overflow:hidden}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem)}
+.hero p.lead{max-width:34ch;color:#d8cdb4}
+.cup{width:100%;max-width:380px;filter:drop-shadow(0 0 40px rgba(242,138,30,.35))}
+.steam{fill:none;stroke:var(--bone);stroke-width:5;stroke-linecap:round;opacity:.7;animation:rise 4s ease-in-out infinite}
+.steam.s2{animation-delay:1.3s}.steam.s3{animation-delay:2.4s}
+@keyframes rise{0%{transform:translateY(12px);opacity:0}40%{opacity:.8}100%{transform:translateY(-18px);opacity:0}}
+.ghost{animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.leaf{position:absolute;top:-40px;font-size:1.4rem;opacity:.8;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{to{transform:translateY(105vh) rotate(360deg)}}
+/* story */
+.band{background:var(--plum)}
+.band-orange{background:var(--pumpkin);color:var(--roast)}
+.band-orange h2{color:var(--roast)}
+.stat{font-family:var(--font-h);font-size:2.6rem;line-height:1}
+/* drink cards */
+.drink{background:var(--plum);border:2px solid transparent;border-radius:22px 22px 22px 4px;padding:1.6rem;height:100%;transition:border-color .25s,transform .25s;cursor:default}
+.drink:hover{border-color:var(--pumpkin);transform:translateY(-6px)}
+.drink .emoji{font-size:2.6rem}
+.drink .spooky{display:block;max-height:0;overflow:hidden;opacity:0;color:var(--pumpkin);font-style:italic;transition:all .35s}
+.drink:hover .spooky,.drink:focus-within .spooky{max-height:60px;opacity:1}
+.price{font-family:var(--font-h);color:var(--pumpkin);font-size:1.3rem}
+/* events */
+.event{border-left:4px dashed var(--pumpkin);padding-left:1.2rem;margin-bottom:1.6rem}
+.event .date{font-family:var(--font-h);color:var(--pumpkin);font-size:1.3rem}
+/* table + form */
+.table-wrap{overflow-x:auto}
+.menu-table{--bs-table-bg:transparent;--bs-table-color:var(--bone);--bs-table-striped-bg:rgba(242,138,30,.07);--bs-table-striped-color:var(--bone);--bs-table-hover-bg:rgba(242,138,30,.18);--bs-table-hover-color:var(--bone);border-color:rgba(239,230,210,.2)}
+.menu-table caption{color:var(--moss);caption-side:top;font-style:italic}
+.menu-table th{font-family:var(--font-h);font-weight:400;color:var(--pumpkin)}
+.form-card{background:var(--plum);border-radius:26px;padding:2rem}
+.form-control,.form-select{background:var(--roast);border:1px solid #6b4a70;color:var(--bone)}
+.form-control:focus,.form-select:focus{background:var(--roast);color:var(--bone);border-color:var(--pumpkin);box-shadow:0 0 0 .25rem rgba(242,138,30,.25)}
+.form-control::placeholder{color:#a99a85}
+.form-label{font-weight:600}
+.page-head{padding:5rem 0 2rem;background:radial-gradient(circle at 20% 0,#5a2f12 0,var(--roast) 65%)}
+footer{background:#140b08;border-top:2px dashed var(--pumpkin);padding:2.5rem 0;color:#b9ab93}
+:focus-visible{outline:3px solid var(--pumpkin);outline-offset:3px}
+@media (min-width:768px){.hero{min-height:80vh}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* witch hat on the "o" of the wordmark */
+.navbar-brand{padding-top:.55rem}
+.hat-o{position:relative;display:inline-block}
+.hat-o::before{content:"";position:absolute;left:50%;bottom:62%;width:1.15em;height:.95em;transform:translateX(-38%) rotate(14deg);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'%3E%3Cpath d='M26 66 L52 14 Q58 5 72 12 Q62 17 66 30 L74 66Z' fill='%237B4B94'/%3E%3Cpath d='M28 56 L72 56 L74 66 L26 66Z' fill='%23F28A1E'/%3E%3Cellipse cx='50' cy='67' rx='46' ry='9' fill='%237B4B94'/%3E%3C/svg%3E") center/contain no-repeat;pointer-events:none}
+.hero h1{padding-top:.35em}
+.tagline{font-family:var(--font-h);font-size:clamp(1.4rem,3.5vw,2rem);margin:.4rem 0 0;color:var(--bone)}
